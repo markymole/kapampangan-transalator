@@ -8,13 +8,13 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-export const oswald = Oswald({
+const oswald = Oswald({
   subsets: ["latin"],
   variable: "--font-oswald",
   display: "swap",
 });
 
-export const karla = Karla({
+const karla = Karla({
   subsets: ["latin"],
   variable: "--font-karla",
   display: "swap",
