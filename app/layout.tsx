@@ -1,8 +1,24 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins, Karla, Oswald } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+export const oswald = Oswald({
+  subsets: ["latin"],
+  variable: "--font-oswald",
+  display: "swap",
+});
+
+export const karla = Karla({
+  subsets: ["latin"],
+  variable: "--font-karla",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +32,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${poppins.variable} ${oswald.variable} ${karla.variable} font-sans`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
